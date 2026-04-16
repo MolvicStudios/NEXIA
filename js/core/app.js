@@ -17,21 +17,32 @@ const App = (() => {
   // ── Configuración de rutas ───────────────────────────────────────────────
 
   function registerRoutes() {
-    // ── Rutas base (disponibles desde MP3) ──
+    // ── Rutas base ──
     Router.config('home', {
       title:    'NEXIA',
       subtitle: I18n.t('app.tagline'),
       showBack: false
     });
+    Router.on('home', (viewEl) => {
+      if (window.Home) Home.init(viewEl);
+    });
+
     Router.config('settings', {
-      title:    I18n.t('common.settings'),
+      title:    I18n.t('settings.title') || I18n.t('common.settings'),
       subtitle: '',
       showBack: false
     });
+    Router.on('settings', (viewEl) => {
+      if (window.Settings) Settings.init(viewEl);
+    });
+
     Router.config('onboarding', {
       title:    '',
       subtitle: '',
       showBack: false
+    });
+    Router.on('onboarding', (viewEl) => {
+      if (window.Onboarding) Onboarding.init(viewEl);
     });
 
     // ── Rutas de tools — se configuran aquí, handlers se añaden en cada MP ──

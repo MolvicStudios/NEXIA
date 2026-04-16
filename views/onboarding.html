@@ -1,7 +1,268 @@
-<div class="view">
-  <div class="empty-state">
-    <div class="empty-state-icon">👋</div>
-    <div class="empty-state-title">Bienvenido a NEXIA</div>
-    <div class="empty-state-desc">El onboarding completo se implementa en MP6</div>
+<div class="view-no-pad" id="onboarding-view">
+
+  <!-- ── SCREEN 1: Bienvenida ── -->
+  <div class="ob-screen" id="ob-screen-1">
+    <div style="padding:var(--space-xl) var(--space-lg) 0;
+                display:flex;flex-direction:column;align-items:center;
+                text-align:center;gap:var(--space-lg)">
+
+      <!-- Logo -->
+      <div style="margin-top:var(--space-xl)">
+        <div style="font-size:3rem;letter-spacing:8px;font-weight:300;color:#fff">
+          NEXIA
+        </div>
+        <div style="font-size:var(--text-sm);color:var(--text-muted);
+                    margin-top:4px;letter-spacing:2px"
+             data-i18n="onboarding.welcomeSubtitle">
+          Tu suite de IA completa
+        </div>
+      </div>
+
+      <!-- Analogía chef -->
+      <div class="card" style="text-align:left;max-width:340px">
+        <div style="font-size:var(--text-base);font-weight:500;
+                    color:var(--text-primary);margin-bottom:var(--space-sm)"
+             data-i18n="onboarding.whatIsApi">
+          ¿Qué es una API de IA?
+        </div>
+        <div style="font-size:var(--text-sm);color:var(--text-secondary);
+                    line-height:1.7" data-i18n="onboarding.apiExplain">
+          Es como contratar un chef a domicilio...
+        </div>
+      </div>
+
+      <!-- Tres paths -->
+      <div style="font-size:var(--text-sm);color:var(--text-secondary);
+                  font-weight:500" data-i18n="onboarding.choosePath">
+        ¿Cómo quieres empezar?
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:10px;
+                  width:100%;max-width:340px">
+
+        <button class="ob-path-btn" id="ob-path-free"
+                style="background:var(--green-bg);border:1px solid #0A4020;
+                       border-radius:var(--r-lg);padding:var(--space-md);
+                       text-align:left;cursor:pointer;
+                       transition:opacity var(--t-fast);width:100%">
+          <div style="display:flex;align-items:center;gap:10px">
+            <span style="font-size:1.5rem">🆓</span>
+            <div>
+              <div style="font-size:var(--text-sm);font-weight:500;
+                          color:var(--green)" data-i18n="onboarding.pathFreeTitle">
+                Gratis, sin tarjeta
+              </div>
+              <div style="font-size:var(--text-xs);color:var(--text-muted);
+                          margin-top:2px" data-i18n="onboarding.pathFreeDesc">
+                Groq o Gemini tienen planes gratuitos generosos.
+              </div>
+            </div>
+          </div>
+        </button>
+
+        <button class="ob-path-btn" id="ob-path-guided"
+                style="background:var(--blue-bg);border:1px solid #142850;
+                       border-radius:var(--r-lg);padding:var(--space-md);
+                       text-align:left;cursor:pointer;
+                       transition:opacity var(--t-fast);width:100%">
+          <div style="display:flex;align-items:center;gap:10px">
+            <span style="font-size:1.5rem">📖</span>
+            <div>
+              <div style="font-size:var(--text-sm);font-weight:500;
+                          color:var(--blue)" data-i18n="onboarding.pathGuidedTitle">
+                Ayúdame a elegir
+              </div>
+              <div style="font-size:var(--text-xs);color:var(--text-muted);
+                          margin-top:2px" data-i18n="onboarding.pathGuidedDesc">
+                Te muestro todos los proveedores.
+              </div>
+            </div>
+          </div>
+        </button>
+
+        <button class="ob-path-btn" id="ob-path-expert"
+                style="background:var(--purple-bg);border:1px solid #4A1A8A;
+                       border-radius:var(--r-lg);padding:var(--space-md);
+                       text-align:left;cursor:pointer;
+                       transition:opacity var(--t-fast);width:100%">
+          <div style="display:flex;align-items:center;gap:10px">
+            <span style="font-size:1.5rem">⚡</span>
+            <div>
+              <div style="font-size:var(--text-sm);font-weight:500;
+                          color:var(--purple-light)" data-i18n="onboarding.pathExpertTitle">
+                Ya tengo mi clave
+              </div>
+              <div style="font-size:var(--text-xs);color:var(--text-muted);
+                          margin-top:2px" data-i18n="onboarding.pathExpertDesc">
+                Selecciona tu proveedor y pega tu clave.
+              </div>
+            </div>
+          </div>
+        </button>
+
+      </div>
+
+      <button class="btn btn-ghost" id="ob-skip-btn"
+              style="color:var(--text-muted);margin-top:var(--space-sm)"
+              data-i18n="onboarding.skip">
+        Configurar después
+      </button>
+
+    </div>
   </div>
+
+  <!-- ── SCREEN 2A: Path Gratis ── -->
+  <div class="ob-screen" id="ob-screen-free" style="display:none">
+    <div style="padding:var(--space-lg)">
+
+      <button class="btn btn-ghost" id="ob-back-free"
+              style="margin-bottom:var(--space-md);color:var(--text-muted)"
+              data-i18n="onboarding.back">← Volver</button>
+
+      <div style="font-size:var(--text-xl);font-weight:500;
+                  color:var(--text-primary);margin-bottom:var(--space-sm)"
+           data-i18n="onboarding.pathFreeTitle">
+        Gratis, sin tarjeta
+      </div>
+
+      <!-- Groq option -->
+      <div class="card card-tap ripple ob-free-provider"
+           data-provider="groq" style="margin-bottom:10px">
+        <div style="display:flex;align-items:center;gap:12px">
+          <div style="width:40px;height:40px;border-radius:10px;
+                      background:var(--green-bg);display:flex;
+                      align-items:center;justify-content:center;
+                      color:var(--green);font-size:18px">⚡</div>
+          <div style="flex:1">
+            <div style="font-size:var(--text-base);font-weight:500">Groq</div>
+            <div style="font-size:var(--text-xs);color:var(--text-muted)">
+              14.400 tokens/min · Ultrarrápido
+            </div>
+          </div>
+          <span class="badge badge-green" data-i18n="onboarding.freeOption">Gratis</span>
+        </div>
+      </div>
+
+      <!-- Gemini option -->
+      <div class="card card-tap ripple ob-free-provider"
+           data-provider="gemini" style="margin-bottom:10px">
+        <div style="display:flex;align-items:center;gap:12px">
+          <div style="width:40px;height:40px;border-radius:10px;
+                      background:var(--blue-bg);display:flex;
+                      align-items:center;justify-content:center;
+                      color:var(--blue);font-size:18px">🔵</div>
+          <div style="flex:1">
+            <div style="font-size:var(--text-base);font-weight:500">
+              Google Gemini
+            </div>
+            <div style="font-size:var(--text-xs);color:var(--text-muted)">
+              1M tokens/día · Flash muy capaz
+            </div>
+          </div>
+          <span class="badge badge-green" data-i18n="onboarding.freeOption">Gratis</span>
+        </div>
+      </div>
+
+      <!-- OpenRouter option -->
+      <div class="card card-tap ripple ob-free-provider"
+           data-provider="openrouter" style="margin-bottom:var(--space-lg)">
+        <div style="display:flex;align-items:center;gap:12px">
+          <div style="width:40px;height:40px;border-radius:10px;
+                      background:var(--amber-bg);display:flex;
+                      align-items:center;justify-content:center;
+                      color:var(--amber);font-size:18px">🔀</div>
+          <div style="flex:1">
+            <div style="font-size:var(--text-base);font-weight:500">
+              OpenRouter
+            </div>
+            <div style="font-size:var(--text-xs);color:var(--text-muted)">
+              Llama, Mistral, Gemma gratis
+            </div>
+          </div>
+          <span class="badge badge-green" data-i18n="onboarding.freeOption">Gratis</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── SCREEN 2B: Path Guiado ── -->
+  <div class="ob-screen" id="ob-screen-guided" style="display:none">
+    <div style="padding:var(--space-lg)">
+
+      <button class="btn btn-ghost" id="ob-back-guided"
+              style="margin-bottom:var(--space-md);color:var(--text-muted)"
+              data-i18n="onboarding.back">← Volver</button>
+
+      <div style="font-size:var(--text-xl);font-weight:500;
+                  color:var(--text-primary);margin-bottom:var(--space-md)"
+           data-i18n="onboarding.chooseProvider">
+        Elige tu proveedor
+      </div>
+
+      <div id="ob-guided-list">
+        <!-- Se genera dinámicamente por onboarding.js -->
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── SCREEN 3: Introducir key (compartida por los 3 paths) ── -->
+  <div class="ob-screen" id="ob-screen-key" style="display:none">
+    <div style="padding:var(--space-lg)">
+
+      <button class="btn btn-ghost" id="ob-back-key"
+              style="margin-bottom:var(--space-md);color:var(--text-muted)"
+              data-i18n="onboarding.back">← Volver</button>
+
+      <div id="ob-key-provider-info"
+           style="display:flex;align-items:center;gap:12px;
+                  margin-bottom:var(--space-lg)">
+        <!-- Inyectado dinámicamente -->
+      </div>
+
+      <!-- Guía paso a paso -->
+      <div id="ob-key-steps" class="card"
+           style="margin-bottom:var(--space-md)">
+        <!-- Inyectado dinámicamente -->
+      </div>
+
+      <!-- Link a la consola del proveedor -->
+      <a id="ob-key-console-link" href="#" target="_blank" rel="noopener noreferrer"
+         class="btn btn-secondary btn-full"
+         style="margin-bottom:var(--space-md);display:flex;justify-content:center">
+        <span data-i18n="onboarding.openConsole">Abrir consola del proveedor</span>
+        &nbsp;↗
+      </a>
+
+      <!-- Input de la key -->
+      <div class="input-group">
+        <label class="input-label" data-i18n="onboarding.enterKey">
+          Introduce tu clave API
+        </label>
+        <input class="input" id="ob-key-input" type="password"
+               autocomplete="off" autocorrect="off" autocapitalize="off"
+               spellcheck="false" />
+        <div id="ob-key-error"
+             style="font-size:var(--text-xs);color:var(--red);
+                    margin-top:4px;display:none">
+        </div>
+      </div>
+
+      <!-- Selector de modelo -->
+      <div class="input-group" id="ob-model-group">
+        <label class="input-label">Modelo</label>
+        <select class="input" id="ob-model-select"></select>
+      </div>
+
+      <button class="btn btn-primary btn-full" id="ob-verify-btn"
+              style="margin-top:var(--space-md)">
+        <span id="ob-verify-text" data-i18n="onboarding.goToApp">
+          Verificar y entrar →
+        </span>
+      </button>
+
+    </div>
+  </div>
+
 </div>

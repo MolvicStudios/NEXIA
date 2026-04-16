@@ -1,10 +1,135 @@
 <div class="view">
-  <div class="section-label">Ajustes</div>
-  <div class="card">
-    <div class="empty-state">
-      <div class="empty-state-icon">⚙</div>
-      <div class="empty-state-title">Ajustes</div>
-      <div class="empty-state-desc">Configuración de proveedores y ajustes se implementa en MP6</div>
+
+  <!-- ── IA y Modelos ── -->
+  <div class="section-label" data-i18n="settings.aiProviders">
+    IA y modelos
+  </div>
+
+  <!-- Proveedor activo -->
+  <div class="card" style="margin-bottom:var(--space-md)">
+    <div style="display:flex;align-items:center;
+                justify-content:space-between;margin-bottom:var(--space-md)">
+      <div style="font-size:var(--text-sm);color:var(--text-secondary)"
+           data-i18n="settings.activeProvider">
+        Proveedor activo
+      </div>
+      <button class="btn btn-secondary" id="settings-change-provider"
+              style="font-size:var(--text-xs);padding:4px 10px;min-height:32px">
+        <span data-i18n="settings.changeProvider">Cambiar</span>
+      </button>
+    </div>
+    <div id="settings-active-provider-info">
+      <!-- Inyectado por settings.js -->
+    </div>
+
+    <!-- Selector de modelo del proveedor activo -->
+    <div class="input-group" style="margin-top:var(--space-md);margin-bottom:0">
+      <label class="input-label">Modelo</label>
+      <select class="input" id="settings-model-select"></select>
     </div>
   </div>
+
+  <!-- Mis claves configuradas -->
+  <div class="card" style="margin-bottom:var(--space-md)">
+    <div style="font-size:var(--text-sm);color:var(--text-secondary);
+                margin-bottom:var(--space-sm)"
+         data-i18n="settings.myKeys">
+      Mis claves API
+    </div>
+    <div id="settings-keys-list">
+      <!-- Inyectado por settings.js -->
+    </div>
+    <button class="btn btn-secondary btn-full" id="settings-add-provider"
+            style="margin-top:var(--space-sm)">
+      + <span data-i18n="settings.addProvider">Añadir proveedor</span>
+    </button>
+  </div>
+
+  <!-- ── Idioma ── -->
+  <div class="section-label" data-i18n="settings.language">Idioma</div>
+
+  <div class="card" style="margin-bottom:var(--space-md)">
+    <div class="input-group" style="margin-bottom:var(--space-md)">
+      <label class="input-label" data-i18n="settings.language">
+        Idioma de la app
+      </label>
+      <select class="input" id="settings-lang-select">
+        <option value="es">Español</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+    <div class="input-group" style="margin-bottom:0">
+      <label class="input-label" data-i18n="settings.aiLanguage">
+        Idioma de respuestas IA
+      </label>
+      <select class="input" id="settings-ai-lang-select">
+        <option value="es">Español</option>
+        <option value="en">English</option>
+        <option value="auto" data-i18n="settings.aiLangAuto">
+          Automático
+        </option>
+      </select>
+    </div>
+  </div>
+
+  <!-- ── App ── -->
+  <div class="section-label">App</div>
+
+  <div class="card" style="margin-bottom:var(--space-md)">
+    <div class="list-item" style="cursor:default">
+      <div class="list-info">
+        <div class="list-title" data-i18n="settings.storageUsed">
+          Almacenamiento usado
+        </div>
+      </div>
+      <span id="settings-storage-usage"
+            style="font-size:var(--text-sm);color:var(--text-muted)">
+        —
+      </span>
+    </div>
+    <div class="list-item" style="cursor:default">
+      <div class="list-info">
+        <div class="list-title" data-i18n="settings.appVersion">
+          Versión
+        </div>
+      </div>
+      <span style="font-size:var(--text-sm);color:var(--text-muted)">
+        1.0.0
+      </span>
+    </div>
+  </div>
+
+  <!-- Borrar datos -->
+  <button class="btn btn-full"
+          style="background:var(--red-bg);border:1px solid #4A1010;
+                 color:var(--red);margin-bottom:var(--space-md)"
+          id="settings-clear-data">
+    <span data-i18n="settings.clearData">Borrar todos los datos</span>
+  </button>
+
+  <!-- ── Sobre ── -->
+  <div class="section-label" data-i18n="settings.about">Sobre NEXIA</div>
+
+  <div class="card">
+    <div class="list-item card-tap ripple" id="settings-privacy-btn">
+      <div class="list-info">
+        <div class="list-title" data-i18n="settings.privacyPolicy">
+          Política de privacidad
+        </div>
+      </div>
+      <span class="list-chevron">↗</span>
+    </div>
+    <div class="list-item" style="cursor:default">
+      <div class="list-info">
+        <div class="list-title" data-i18n="settings.molvicStudios">
+          MolvicStudios
+        </div>
+        <div class="list-subtitle">molvicstudios@outlook.com</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Espacio inferior -->
+  <div style="height:var(--space-xl)"></div>
+
 </div>
