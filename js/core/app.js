@@ -210,6 +210,7 @@ const App = (() => {
 
         // 2. Inicializar skills por defecto
         Skills.init();
+        if (window.SkillsUI) SkillsUI.init();
 
         // 3. Cargar idioma guardado
         await I18n.init();

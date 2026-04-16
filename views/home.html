@@ -1,15 +1,201 @@
 <div class="view">
-  <div class="api-status">
+
+  <!-- ── Barra de estado API ──────────────────────────────────────── -->
+  <div class="api-status" id="home-api-status">
     <div class="api-status-left">
-      <div class="api-dot warning"></div>
-      <span class="api-text">Configura tu API en Ajustes</span>
+      <div class="api-dot warning" id="home-api-dot"></div>
+      <span class="api-text" id="home-api-text" data-i18n="home.noApi">Configura tu API en Ajustes</span>
     </div>
-    <span class="api-action">Ajustes</span>
+    <span class="api-action" id="home-api-action" data-i18n="common.settings">Ajustes</span>
   </div>
-  <div class="section-label" data-i18n="home.tools">Herramientas</div>
-  <div class="empty-state">
-    <div class="empty-state-icon">⚡</div>
-    <div class="empty-state-title">NEXIA</div>
-    <div class="empty-state-desc">El grid de herramientas se carga en MP3</div>
+
+  <!-- ── Cabecera de skills ────────────────────────────────────────── -->
+  <div class="section-header">
+    <span class="section-label" data-i18n="home.tools">Herramientas</span>
+    <button class="btn-icon" id="btn-skills-library" aria-label="Skills library">
+      <span id="skills-library-count" class="chip chip-sm"></span>
+      <span data-i18n="home.mySkills">Mis Skills</span>
+    </button>
   </div>
+
+  <!-- ── Grid de herramientas ──────────────────────────────────────── -->
+  <div class="tools-grid" id="tools-grid">
+    <!-- Chat IA -->
+    <div class="tool-card" data-route="chat">
+      <div class="tool-card-icon">💬</div>
+      <div class="tool-card-name" data-i18n="tools.chat">Chat IA</div>
+      <div class="tool-card-skill" data-skill-chip-tool="chat"></div>
+    </div>
+    <!-- Editor IA -->
+    <div class="tool-card" data-route="editor">
+      <div class="tool-card-icon">✍️</div>
+      <div class="tool-card-name" data-i18n="tools.editor">Editor IA</div>
+      <div class="tool-card-skill" data-skill-chip-tool="editor"></div>
+    </div>
+    <!-- Correo IA -->
+    <div class="tool-card" data-route="email">
+      <div class="tool-card-icon">📧</div>
+      <div class="tool-card-name" data-i18n="tools.email">Correo IA</div>
+      <div class="tool-card-skill" data-skill-chip-tool="email"></div>
+    </div>
+    <!-- Traductor -->
+    <div class="tool-card" data-route="translator">
+      <div class="tool-card-icon">🌐</div>
+      <div class="tool-card-name" data-i18n="tools.translator">Traductor</div>
+      <div class="tool-card-skill" data-skill-chip-tool="translator"></div>
+    </div>
+    <!-- Código IA -->
+    <div class="tool-card" data-route="code">
+      <div class="tool-card-icon">💻</div>
+      <div class="tool-card-name" data-i18n="tools.code">Código IA</div>
+      <div class="tool-card-skill" data-skill-chip-tool="code"></div>
+    </div>
+    <!-- Generador -->
+    <div class="tool-card" data-route="generator">
+      <div class="tool-card-icon">✨</div>
+      <div class="tool-card-name" data-i18n="tools.generator">Generador</div>
+      <div class="tool-card-skill" data-skill-chip-tool="generator"></div>
+    </div>
+    <!-- Repurpose -->
+    <div class="tool-card" data-route="repurpose">
+      <div class="tool-card-icon">♻️</div>
+      <div class="tool-card-name" data-i18n="tools.repurpose">Repurpose</div>
+      <div class="tool-card-skill" data-skill-chip-tool="repurpose"></div>
+    </div>
+    <!-- Resumir -->
+    <div class="tool-card" data-route="summarizer">
+      <div class="tool-card-icon">📝</div>
+      <div class="tool-card-name" data-i18n="tools.summarizer">Resumir</div>
+      <div class="tool-card-skill" data-skill-chip-tool="summarizer"></div>
+    </div>
+    <!-- Brief Gen -->
+    <div class="tool-card" data-route="brief">
+      <div class="tool-card-icon">📋</div>
+      <div class="tool-card-name" data-i18n="tools.brief">Brief Gen</div>
+      <div class="tool-card-skill" data-skill-chip-tool="brief"></div>
+    </div>
+    <!-- Naming IA -->
+    <div class="tool-card" data-route="naming">
+      <div class="tool-card-icon">🏷️</div>
+      <div class="tool-card-name" data-i18n="tools.naming">Naming IA</div>
+      <div class="tool-card-skill" data-skill-chip-tool="naming"></div>
+    </div>
+    <!-- Prompts -->
+    <div class="tool-card" data-route="prompts">
+      <div class="tool-card-icon">🎯</div>
+      <div class="tool-card-name" data-i18n="tools.prompts">Prompts</div>
+      <div class="tool-card-skill" data-skill-chip-tool="prompts"></div>
+    </div>
+    <!-- Prospectly -->
+    <div class="tool-card" data-route="prospectly">
+      <div class="tool-card-icon">🔍</div>
+      <div class="tool-card-name" data-i18n="tools.prospectly">Prospectly</div>
+      <div class="tool-card-skill" data-skill-chip-tool="prospectly"></div>
+    </div>
+    <!-- Propuestas -->
+    <div class="tool-card" data-route="proposals">
+      <div class="tool-card-icon">📄</div>
+      <div class="tool-card-name" data-i18n="tools.proposals">Propuestas</div>
+      <div class="tool-card-skill" data-skill-chip-tool="proposals"></div>
+    </div>
+    <!-- Contratos -->
+    <div class="tool-card" data-route="contracts">
+      <div class="tool-card-icon">📑</div>
+      <div class="tool-card-name" data-i18n="tools.contracts">Contratos</div>
+      <div class="tool-card-skill" data-skill-chip-tool="contracts"></div>
+    </div>
+    <!-- CV Builder -->
+    <div class="tool-card" data-route="cv">
+      <div class="tool-card-icon">👤</div>
+      <div class="tool-card-name" data-i18n="tools.cv">CV Builder</div>
+      <div class="tool-card-skill" data-skill-chip-tool="cv"></div>
+    </div>
+  </div>
+
+  <!-- ── Script de inicio de vista ────────────────────────────────── -->
+  <script>
+  (function () {
+    'use strict';
+
+    function _updateApiStatus() {
+      const dot    = document.getElementById('home-api-dot');
+      const text   = document.getElementById('home-api-text');
+      const action = document.getElementById('home-api-action');
+      if (!dot || !text || !action) return;
+
+      const hasKey = window.Providers && Providers.hasAnyKey();
+      if (hasKey) {
+        dot.className    = 'api-dot active';
+        text.textContent = window.I18n ? I18n.t('home.apiReady') : 'API configurada';
+        action.style.display = 'none';
+      } else {
+        dot.className    = 'api-dot warning';
+        text.textContent = window.I18n ? I18n.t('home.noApi') : 'Configura tu API en Ajustes';
+        action.style.display = '';
+        action.textContent = window.I18n ? I18n.t('common.settings') : 'Ajustes';
+      }
+    }
+
+    function _updateSkillsCount() {
+      const badge = document.getElementById('skills-library-count');
+      if (!badge || !window.Skills) return;
+      const custom = Skills.getAll().filter(s => !s.isDefault);
+      badge.textContent = custom.length > 0 ? String(custom.length) : '';
+      badge.style.display = custom.length > 0 ? '' : 'none';
+    }
+
+    function _renderChips() {
+      if (!window.SkillsUI) return;
+      document.querySelectorAll('[data-skill-chip-tool]').forEach(el => {
+        el.innerHTML = '';
+        el.appendChild(SkillsUI.renderChip(el.dataset.skillChipTool));
+      });
+    }
+
+    function _setupToolCards() {
+      document.querySelectorAll('.tool-card[data-route]').forEach(card => {
+        card.addEventListener('click', () => {
+          const route = card.dataset.route;
+          if (route && window.Router) {
+            if (window.Utils) Utils.haptic('light');
+            Router.navigate(route);
+          }
+        });
+      });
+    }
+
+    function _setupSkillsLibraryBtn() {
+      const btn = document.getElementById('btn-skills-library');
+      if (!btn) return;
+      btn.addEventListener('click', () => {
+        if (window.SkillsUI) SkillsUI.openLibrary();
+      });
+    }
+
+    function _setupApiActionBtn() {
+      const action = document.getElementById('home-api-action');
+      if (!action) return;
+      action.addEventListener('click', () => {
+        if (window.Router) Router.navigate('settings');
+      });
+    }
+
+    // ── Escuchar eventos globales ──
+    document.addEventListener('providers:changed', _updateApiStatus);
+    document.addEventListener('skills:active-changed', _renderChips);
+    document.addEventListener('i18n:changed', function () {
+      _updateApiStatus();
+      _updateSkillsCount();
+    });
+
+    // ── Arranque de la vista ──
+    _updateApiStatus();
+    _updateSkillsCount();
+    _renderChips();
+    _setupToolCards();
+    _setupSkillsLibraryBtn();
+    _setupApiActionBtn();
+  })();
+  </script>
+
 </div>
