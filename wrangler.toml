@@ -1,0 +1,12 @@
+name = "nexia-api"
+main = "worker/nexia-api.js"
+compatibility_date = "2024-09-23"
+account_id = "dab7dafa25a5e286353b2de092fc039a"
+
+# Sin KV ni D1 — NEXIA Worker es completamente stateless
+# La API key del usuario viaja en cada request (BYOK)
+
+[vars]
+ENVIRONMENT = "production"
+# MAX_TOKENS_LIMIT se define aquí para poder cambiarlo sin redeploy
+MAX_TOKENS_LIMIT = "4096"
