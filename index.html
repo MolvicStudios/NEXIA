@@ -11,7 +11,7 @@
   <!-- Content Security Policy -->
   <meta http-equiv="Content-Security-Policy"
     content="default-src 'self';
-             script-src 'self' 'unsafe-inline' https://unpkg.com;
+             script-src 'self' 'unsafe-inline';
              style-src 'self' 'unsafe-inline';
              connect-src 'self' https://nexia-api.molvicstudios.workers.dev capacitor://localhost http://localhost;
              img-src 'self' data: blob:;
@@ -110,7 +110,7 @@
 </div><!-- #app -->
 
 <!-- Capacitor Core — debe ser el primer script -->
-<script src="https://unpkg.com/@capacitor/core@6/dist/capacitor.js" defer></script>
+<!-- <script src="https://unpkg.com/@capacitor/core@6/dist/capacitor.js" defer></script> -->
 
 <!-- Módulos core — se cargan en MP2 y MP3 -->
 <!-- <script src="js/core/storage.js" defer></script>   → MP2 -->

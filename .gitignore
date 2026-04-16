@@ -1,7 +1,7 @@
 # Capacitor Android (generado, no versionar)
 android/
 
-# Directorio de distribución web (generado por npm run build)
+# Web assets build output (generado por prepare-www, no versionar)
 www/
 
 # Dependencias

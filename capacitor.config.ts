@@ -3,7 +3,9 @@ import { CapacitorConfig } from '@capacitor/cli';
 const config: CapacitorConfig = {
   appId: 'pro.molvicstudios.nexia',
   appName: 'NEXIA',
-  webDir: 'www', // Capacitor 6 no admite '.' — assets se sirven desde www/
+  // webDir apunta a www/ — usar `npm run prepare-www` antes de `cap sync`
+  // Los fuentes siguen en raíz; www/ es el output copiado para Android
+  webDir: 'www',
   server: {
     // Desarrollo con livereload: descomentar y poner IP local
     // url: 'http://192.168.X.X:8080',
