@@ -1,0 +1,146 @@
+/* Estilos compartidos por todas las herramientas IA */
+
+/* ── Cabecera de tool ── */
+.tool-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.tool-icon-lg {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.tool-name {
+  font-size: var(--text-lg);
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.tool-desc {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  margin-top: 1px;
+}
+
+/* ── Skill selector chip ── */
+.skill-selector {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.skill-selector-label {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+/* ── Output box — resultado generado por IA ── */
+.output-box {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--r-md);
+  padding: var(--space-md);
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+  line-height: 1.7;
+  white-space: pre-wrap;
+  word-break: break-word;
+  -webkit-user-select: text;
+  user-select: text;
+  min-height: 80px;
+}
+
+.output-box.loading {
+  color: var(--text-muted);
+}
+
+/* Cursor parpadeante durante streaming */
+.output-box.streaming::after {
+  content: '▋';
+  color: var(--purple-light);
+  animation: cursor-blink 0.7s step-end infinite;
+}
+
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ── Barra de acciones sobre el output ── */
+.output-actions {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.output-actions .btn {
+  flex: 1;
+  min-width: 80px;
+  font-size: var(--text-xs);
+  padding: 0.5rem var(--space-sm);
+}
+
+/* ── Generating overlay ── */
+.generating-bar {
+  height: 2px;
+  background: var(--bg-elevated);
+  border-radius: var(--r-pill);
+  overflow: hidden;
+  margin-bottom: var(--space-sm);
+}
+
+.generating-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--purple), var(--purple-light));
+  border-radius: var(--r-pill);
+  transition: width var(--t-normal);
+}
+
+.generating-bar.active .generating-bar-fill {
+  animation: progress-indeterminate 1.5s ease-in-out infinite;
+}
+
+@keyframes progress-indeterminate {
+  0%   { width: 0%;   margin-left: 0%;   }
+  50%  { width: 70%;  margin-left: 15%;  }
+  100% { width: 0%;   margin-left: 100%; }
+}
+
+/* ── Error state ── */
+.error-message {
+  background: var(--red-bg);
+  border: 1px solid #4A1010;
+  border-radius: var(--r-md);
+  padding: var(--space-sm) var(--space-md);
+  font-size: var(--text-sm);
+  color: var(--red);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+/* ── Contador de caracteres ── */
+.char-count {
+  text-align: right;
+  font-size: var(--text-xs);
+  color: var(--text-disabled);
+  margin-top: var(--space-xs);
+}
+
+.char-count.warning { color: var(--amber); }
+.char-count.danger  { color: var(--red); }

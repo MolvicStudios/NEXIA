@@ -1,0 +1,86 @@
+:root {
+  /* ── Colores de fondo ── */
+  --bg-base:     #06060F;
+  --bg-card:     #0E0E20;
+  --bg-elevated: #141430;
+  --bg-high:     #1A1A38;
+
+  /* ── Bordes ── */
+  --border-subtle: #1E1E3A;
+  --border-mid:    #252550;
+  --border-strong: #3A3A60;
+
+  /* ── Texto ── */
+  --text-primary:   #E8E0FF;
+  --text-secondary: #9B8BD0;
+  --text-muted:     #4B5563;
+  --text-disabled:  #2D3748;
+
+  /* ── Marca — Púrpura ── */
+  --purple:       #7C3AED;
+  --purple-dark:  #5B21B6;
+  --purple-bg:    #2E0A5E;
+  --purple-light: #C4B5FD;
+  --header-bg:    #1E0878;
+
+  /* ── Semánticos ── */
+  --green:      #34D399;
+  --green-bg:   #064E3B;
+  --amber:      #FCD34D;
+  --amber-bg:   #4A2000;
+  --blue:       #60A5FA;
+  --blue-bg:    #0A1840;
+  --red:        #FCA5A5;
+  --red-bg:     #2A0A0A;
+  --teal:       #5EEAD4;
+  --teal-bg:    #042A28;
+  --pink:       #F472B6;
+  --pink-bg:    #4A0A28;
+  --orange:     #FB923C;
+  --orange-bg:  #2E1200;
+
+  /* ── Espaciado ── */
+  --space-xs:  0.25rem;  /* 4px  */
+  --space-sm:  0.5rem;   /* 8px  */
+  --space-md:  1rem;     /* 16px */
+  --space-lg:  1.5rem;   /* 24px */
+  --space-xl:  2rem;     /* 32px */
+  --space-2xl: 3rem;     /* 48px */
+
+  /* ── Border radius ── */
+  --r-sm:   8px;
+  --r-md:   12px;
+  --r-lg:   16px;
+  --r-xl:   24px;
+  --r-pill: 999px;
+
+  /* ── Tipografía ── */
+  --font-sans: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'Consolas', 'Courier New', monospace;
+  --text-xs:   0.75rem;   /* 12px */
+  --text-sm:   0.875rem;  /* 14px */
+  --text-base: 1rem;      /* 16px */
+  --text-lg:   1.125rem;  /* 18px */
+  --text-xl:   1.25rem;   /* 20px */
+  --text-2xl:  1.5rem;    /* 24px */
+
+  /* ── Transiciones ── */
+  --t-fast:   100ms ease;
+  --t-normal: 200ms ease;
+  --t-slow:   300ms ease-out;
+
+  /* ── Safe areas Android ── */
+  --safe-top:    env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left:   env(safe-area-inset-left, 0px);
+  --safe-right:  env(safe-area-inset-right, 0px);
+
+  /* ── Layout fijo ── */
+  --header-height:  56px;
+  --nav-height:     64px;
+  --nav-total:      calc(var(--nav-height) + var(--safe-bottom));
+  --touch-min:      44px;
+
+  /* ── Sombras (solo funcionales, no decorativas) ── */
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.4);
+}

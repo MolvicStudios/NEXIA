@@ -1,0 +1,29 @@
+# Capacitor Android (generado, no versionar)
+android/
+
+# Directorio de distribución web (generado por npm run build)
+www/
+
+# Dependencias
+node_modules/
+
+# Keystore (NUNCA versionar)
+*.keystore
+*.jks
+nexia-keystores/
+
+# Variables de entorno
+.env
+.env.local
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/settings.json
+.idea/
+
+# Logs
+*.log
+npm-debug.log*

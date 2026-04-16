@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,
+        viewport-fit=cover, user-scalable=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#1E0878">
+
+  <!-- Content Security Policy -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self';
+             script-src 'self' 'unsafe-inline' https://unpkg.com;
+             style-src 'self' 'unsafe-inline';
+             connect-src 'self' https://nexia-api.molvicstudios.workers.dev capacitor://localhost http://localhost;
+             img-src 'self' data: blob:;
+             font-src 'self';">
+
+  <title>NEXIA</title>
+
+  <!-- CSS — orden de carga importa -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/tools.css">
+</head>
+<body>
+
+<div id="app" class="no-select">
+
+  <!-- ── HEADER ── -->
+  <header id="app-header">
+    <div class="header-inner">
+      <div class="header-left">
+        <div id="btn-back" class="header-back" role="button" aria-label="Volver">
+          ‹
+        </div>
+        <div>
+          <div class="header-title" id="header-title">NEXIA</div>
+          <div class="header-subtitle" id="header-subtitle"></div>
+        </div>
+      </div>
+      <div class="header-right" id="header-actions">
+        <!-- Acciones contextuales por tool — inyectadas desde cada tool.js -->
+      </div>
+    </div>
+  </header>
+
+  <!-- ── VIEW CONTAINER ── -->
+  <main id="view-container" role="main">
+    <!-- Las vistas se inyectan aquí por el router -->
+    <!-- Placeholder mientras carga -->
+    <div class="view">
+      <div class="skeleton skeleton-text skeleton-text-mid"></div>
+      <div class="skeleton skeleton-text skeleton-text-full" style="margin-top: 8px"></div>
+      <div class="skeleton skeleton-text skeleton-text-short" style="margin-top: 8px"></div>
+    </div>
+  </main>
+
+  <!-- ── BOTTOM NAVIGATION ── -->
+  <nav id="bottom-nav" role="navigation" aria-label="Navegación principal">
+    <div class="nav-inner">
+
+      <div class="nav-item active ripple no-select" data-route="home" role="button" tabindex="0">
+        <div class="nav-icon">⌂</div>
+        <span class="nav-label" data-i18n="nav.home">Inicio</span>
+      </div>
+
+      <div class="nav-item ripple no-select" data-route="chat" role="button" tabindex="0">
+        <div class="nav-icon">✎</div>
+        <span class="nav-label" data-i18n="nav.write">Escribir</span>
+      </div>
+
+      <div class="nav-item ripple no-select" data-route="generator" role="button" tabindex="0">
+        <div class="nav-icon">✦</div>
+        <span class="nav-label" data-i18n="nav.create">Crear</span>
+      </div>
+
+      <div class="nav-item ripple no-select" data-route="prospectly" role="button" tabindex="0">
+        <div class="nav-icon">◈</div>
+        <span class="nav-label" data-i18n="nav.pro">Pro</span>
+      </div>
+
+      <div class="nav-item ripple no-select" data-route="settings" role="button" tabindex="0">
+        <div class="nav-icon">≡</div>
+        <span class="nav-label" data-i18n="nav.more">Más</span>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ── MODAL OVERLAY (bottom sheets) ── -->
+  <div id="modal-overlay" class="modal-overlay" role="dialog" aria-modal="true">
+    <div id="bottom-sheet" class="bottom-sheet">
+      <div class="sheet-handle"></div>
+      <div id="sheet-content">
+        <!-- Contenido inyectado por cada tool -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SNACKBAR ── -->
+  <div id="snackbar" class="snackbar" role="status" aria-live="polite">
+    <span id="snackbar-message"></span>
+    <span id="snackbar-action" class="snackbar-action" style="display:none"></span>
+  </div>
+
+</div><!-- #app -->
+
+<!-- Capacitor Core — debe ser el primer script -->
+<script src="https://unpkg.com/@capacitor/core@6/dist/capacitor.js" defer></script>
+
+<!-- Módulos core — se cargan en MP2 y MP3 -->
+<!-- <script src="js/core/storage.js" defer></script>   → MP2 -->
+<!-- <script src="js/core/providers.js" defer></script> → MP2 -->
+<!-- <script src="js/core/skills.js" defer></script>    → MP2 -->
+<!-- <script src="js/core/utils.js" defer></script>     → MP2 -->
+<!-- <script src="js/core/i18n.js" defer></script>      → MP3 -->
+<!-- <script src="js/core/router.js" defer></script>    → MP3 -->
+<!-- <script src="js/core/state.js" defer></script>     → MP3 -->
+<!-- <script src="js/core/app.js" defer></script>       → MP3 -->
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "nexia",
+  "version": "1.0.0",
+  "description": "NEXIA — Suite IA Android",
+  "scripts": {
+    "prebuild": "rsync -av --exclude='www' --exclude='android' --exclude='node_modules' --exclude='.git' --exclude='*.ts' --exclude='*.keystore' . www/",
+    "sync": "npm run prebuild && npx cap sync android",
+    "open": "npx cap open android",
+    "build": "npm run prebuild",
+    "dev": "npx cap run android --livereload --external"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.0.0",
+    "@capacitor/app": "^6.0.0",
+    "@capacitor/clipboard": "^6.0.0",
+    "@capacitor/core": "^6.0.0",
+    "@capacitor/haptics": "^6.0.0",
+    "@capacitor/keyboard": "^6.0.0",
+    "@capacitor/share": "^6.0.0",
+    "@capacitor/splash-screen": "^6.0.0",
+    "@capacitor/status-bar": "^6.0.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.0.0",
+    "typescript": "^6.0.2"
+  }
+}
