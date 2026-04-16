@@ -1,7 +1,9 @@
 {
   "app": {
     "name": "NEXIA",
-    "tagline": "Your AI suite"
+    "tagline": "Your AI suite",
+    "exit": "Exit",
+    "exitTitle": "Exit NEXIA?"
   },
   "nav": {
     "home": "Home",
@@ -13,19 +15,26 @@
   "home": {
     "tools": "Tools",
     "apiActive": "API active",
-    "apiInactive": "Set up your API"
+    "apiInactive": "Set up your API",
+    "recentTools": "Recently used"
   },
   "errors": {
     "noApiKey": "Set up your API key in Settings",
     "rateLimited": "Rate limit reached. Please wait",
     "networkError": "No internet connection",
     "timeout": "Request timed out. Try again",
-    "keyInvalid": "Invalid API key"
+    "keyInvalid": "Invalid API key",
+    "viewNotFound": "View not found",
+    "noConnection": "No internet connection",
+    "backOnline": "Connection restored",
+    "storageWarning": "Storage almost full"
   },
   "common": {
     "copy": "Copy",
+    "copied": "Copied",
     "share": "Share",
     "save": "Save",
+    "saved": "Saved",
     "cancel": "Cancel",
     "delete": "Delete",
     "edit": "Edit",
@@ -34,6 +43,10 @@
     "regenerate": "Regenerate",
     "close": "Close",
     "settings": "Settings",
-    "noSkill": "No skill"
+    "noSkill": "No skill",
+    "apply": "Apply",
+    "create": "Create",
+    "confirm": "Confirm",
+    "search": "Search..."
   }
 }
