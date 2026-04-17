@@ -145,5 +145,85 @@
     "modelSaved": "Modelo guardado",
     "providerActive": "Proveedor activo",
     "switchProvider": "Cambiar a este proveedor"
+  },
+  "editor": {
+    "title": "Editor IA",
+    "newDoc": "Nuevo documento",
+    "untitled": "Sin título",
+    "placeholder": "Empieza a escribir o pega tu texto aquí...",
+    "wordCount": "{{count}} palabras",
+    "charCount": "{{count}} caracteres",
+    "myDocs": "Mis documentos",
+    "noDocsYet": "Sin documentos guardados",
+    "docSaved": "Guardado",
+    "docDeleted": "Documento eliminado",
+    "selectText": "Selecciona texto para ver las acciones IA",
+    "aiActions": "Acciones IA",
+    "improve": "Mejorar",
+    "shorten": "Acortar",
+    "expand": "Ampliar",
+    "continue": "Continuar",
+    "fix": "Corregir",
+    "simplify": "Simplificar",
+    "toneTitle": "Cambiar tono",
+    "toneFormal": "Formal",
+    "toneCasual": "Casual",
+    "tonePersuasive": "Persuasivo",
+    "toneProfessional": "Profesional",
+    "replaceSelection": "Reemplazar selección",
+    "insertBelow": "Insertar debajo",
+    "discard": "Descartar",
+    "generating": "Generando...",
+    "copyAll": "Copiar todo",
+    "shareAll": "Compartir"
+  },
+  "email": {
+    "title": "Correo IA",
+    "typeLabel": "Tipo de email",
+    "types": {
+      "cold": "Contacto en frío",
+      "followup": "Seguimiento",
+      "formal": "Formal / Profesional",
+      "newsletter": "Newsletter",
+      "complaint": "Reclamación"
+    },
+    "toneLabel": "Tono",
+    "tones": {
+      "professional": "Profesional",
+      "friendly": "Amigable",
+      "urgent": "Urgente"
+    },
+    "recipientLabel": "Destinatario (opcional)",
+    "recipientPlaceholder": "Nombre o empresa...",
+    "objectiveLabel": "¿Qué quieres conseguir?",
+    "objectivePlaceholder": "Presentar mi servicio, hacer seguimiento de...",
+    "subjectLabel": "Asunto sugerido",
+    "generateEmail": "Generar email",
+    "copySubject": "Copiar asunto",
+    "copyBody": "Copiar cuerpo",
+    "copyAll": "Copiar todo"
+  },
+  "translator": {
+    "title": "Traductor",
+    "from": "De",
+    "to": "A",
+    "swap": "↔",
+    "domainLabel": "Dominio",
+    "domains": {
+      "general": "General",
+      "technical": "Técnico",
+      "legal": "Legal",
+      "casual": "Casual"
+    },
+    "inputPlaceholder": "Escribe o pega el texto a traducir...",
+    "translate": "Traducir",
+    "charLimit": "Máximo 3000 caracteres",
+    "langs": {
+      "es": "Español",
+      "en": "Inglés",
+      "de": "Alemán",
+      "fr": "Francés",
+      "zh": "Chino"
+    }
   }
 }

@@ -1,0 +1,66 @@
+<div class="view" id="email-view">
+  <div id="email-skill-chip" style="margin-bottom:var(--space-md)"></div>
+
+  <div class="input-group">
+    <label class="input-label" data-i18n="email.typeLabel">Tipo</label>
+    <select class="input" id="email-type">
+      <option value="cold"       data-i18n="email.types.cold">Contacto en frío</option>
+      <option value="followup"   data-i18n="email.types.followup">Seguimiento</option>
+      <option value="formal"     data-i18n="email.types.formal">Formal</option>
+      <option value="newsletter" data-i18n="email.types.newsletter">Newsletter</option>
+      <option value="complaint"  data-i18n="email.types.complaint">Reclamación</option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <label class="input-label" data-i18n="email.toneLabel">Tono</label>
+    <select class="input" id="email-tone">
+      <option value="professional" data-i18n="email.tones.professional">Profesional</option>
+      <option value="friendly"     data-i18n="email.tones.friendly">Amigable</option>
+      <option value="urgent"       data-i18n="email.tones.urgent">Urgente</option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <label class="input-label" data-i18n="email.recipientLabel">Destinatario</label>
+    <input class="input" id="email-recipient"
+           data-i18n-placeholder="email.recipientPlaceholder" />
+  </div>
+
+  <div class="input-group">
+    <label class="input-label" data-i18n="email.objectiveLabel">Objetivo</label>
+    <textarea class="input textarea" id="email-objective" rows="3"
+              data-i18n-placeholder="email.objectivePlaceholder"></textarea>
+  </div>
+
+  <button class="btn btn-primary btn-full" id="email-generate-btn">
+    <span data-i18n="email.generateEmail">Generar email</span>
+  </button>
+
+  <div class="generating-bar" id="email-progress" style="margin-top:var(--space-md)">
+    <div class="generating-bar-fill"></div>
+  </div>
+
+  <div id="email-result" style="display:none;margin-top:var(--space-md)">
+    <div class="input-group">
+      <label class="input-label" data-i18n="email.subjectLabel">Asunto</label>
+      <div class="output-box selectable" id="email-subject-output"></div>
+    </div>
+    <div class="input-group">
+      <label class="input-label">Cuerpo</label>
+      <div class="output-box selectable" id="email-body-output" style="min-height:200px"></div>
+    </div>
+    <div class="output-actions">
+      <button class="btn btn-secondary" id="email-copy-subject">
+        <span data-i18n="email.copySubject">Copiar asunto</span>
+      </button>
+      <button class="btn btn-secondary" id="email-copy-body">
+        <span data-i18n="email.copyBody">Copiar cuerpo</span>
+      </button>
+      <button class="btn btn-secondary" id="email-copy-all">
+        <span data-i18n="email.copyAll">Copiar todo</span>
+      </button>
+      <button class="btn btn-ghost" id="email-regen-btn">↺</button>
+    </div>
+  </div>
+</div>

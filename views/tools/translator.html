@@ -1,0 +1,60 @@
+<div class="view" id="translator-view">
+  <div id="translator-skill-chip" style="margin-bottom:var(--space-md)"></div>
+
+  <!-- Selector de par de idiomas -->
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:var(--space-md)">
+    <select class="input" id="trans-from" style="flex:1">
+      <option value="es" selected data-i18n="translator.langs.es">Español</option>
+      <option value="en" data-i18n="translator.langs.en">Inglés</option>
+      <option value="de" data-i18n="translator.langs.de">Alemán</option>
+      <option value="fr" data-i18n="translator.langs.fr">Francés</option>
+      <option value="zh" data-i18n="translator.langs.zh">Chino</option>
+    </select>
+    <button class="btn btn-icon btn-secondary" id="trans-swap-btn">↔</button>
+    <select class="input" id="trans-to" style="flex:1">
+      <option value="es" data-i18n="translator.langs.es">Español</option>
+      <option value="en" selected data-i18n="translator.langs.en">Inglés</option>
+      <option value="de" data-i18n="translator.langs.de">Alemán</option>
+      <option value="fr" data-i18n="translator.langs.fr">Francés</option>
+      <option value="zh" data-i18n="translator.langs.zh">Chino</option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <label class="input-label" data-i18n="translator.domainLabel">Dominio</label>
+    <select class="input" id="trans-domain">
+      <option value="general"   data-i18n="translator.domains.general">General</option>
+      <option value="technical" data-i18n="translator.domains.technical">Técnico</option>
+      <option value="legal"     data-i18n="translator.domains.legal">Legal</option>
+      <option value="casual"    data-i18n="translator.domains.casual">Casual</option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <textarea class="input textarea" id="trans-input" rows="5" maxlength="3000"
+              data-i18n-placeholder="translator.inputPlaceholder"></textarea>
+    <div class="char-count" id="trans-char-count">0/3000</div>
+  </div>
+
+  <button class="btn btn-primary btn-full" id="trans-btn">
+    <span data-i18n="translator.translate">Traducir</span>
+  </button>
+
+  <div class="generating-bar" id="trans-progress" style="margin-top:var(--space-md)">
+    <div class="generating-bar-fill"></div>
+  </div>
+
+  <div id="trans-result" style="display:none;margin-top:var(--space-md)">
+    <label class="input-label">Traducción</label>
+    <div class="output-box selectable" id="trans-output"></div>
+    <div class="output-actions" style="margin-top:var(--space-sm)">
+      <button class="btn btn-secondary" id="trans-copy-btn">
+        <span data-i18n="common.copy">Copiar</span>
+      </button>
+      <button class="btn btn-secondary" id="trans-share-btn">
+        <span data-i18n="common.share">Compartir</span>
+      </button>
+      <button class="btn btn-ghost" id="trans-regen-btn">↺</button>
+    </div>
+  </div>
+</div>

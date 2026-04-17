@@ -72,6 +72,19 @@ const App = (() => {
         // Los tools reales reemplazan este handler en sus respectivos MPs
       });
     });
+
+    // ── Handlers reales (MP8 — Editor IA) ──
+    Router.on('editor', (viewEl) => {
+      if (window.EditorTool) EditorTool.init(viewEl);
+    });
+
+    // ── Handlers reales (MP9 — Correo IA + Traductor) ──
+    Router.on('email', (viewEl) => {
+      if (window.EmailTool) EmailTool.init(viewEl);
+    });
+    Router.on('translator', (viewEl) => {
+      if (window.TranslatorTool) TranslatorTool.init(viewEl);
+    });
   }
 
   // ── Event listeners globales ─────────────────────────────────────────────

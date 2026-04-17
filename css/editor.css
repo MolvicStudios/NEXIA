@@ -1,0 +1,91 @@
+/* ── Editor IA ──────────────────────────────────────────────────────────── */
+
+#editor-view {
+  display: flex;
+  flex-direction: column;
+  height: calc(100dvh - var(--header-height) - var(--safe-top) - var(--nav-total));
+}
+
+#editor-toolbar {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-xs) var(--space-md);
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--bg-base);
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+#editor-textarea {
+  flex: 1;
+  background: var(--bg-base);
+  border: none;
+  outline: none;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: 1.8;
+  padding: var(--space-lg) var(--space-md);
+  resize: none;
+  -webkit-user-select: text;
+  user-select: text;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+}
+
+#editor-footer {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-xs) var(--space-md);
+  border-top: 1px solid var(--border-subtle);
+  background: var(--bg-base);
+}
+
+#editor-status {
+  font-size: var(--text-xs);
+  color: var(--text-disabled);
+}
+
+/* Barra flotante de acciones IA — aparece sobre selección */
+#ai-action-bar {
+  position: absolute;
+  bottom: calc(var(--nav-total) + 60px);
+  left: var(--space-md);
+  right: var(--space-md);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-mid);
+  border-radius: var(--r-lg);
+  padding: var(--space-sm);
+  display: none;
+  flex-wrap: wrap;
+  gap: 6px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  z-index: 20;
+}
+
+#ai-action-bar.visible {
+  display: flex;
+}
+
+.ai-action-btn {
+  padding: 6px 12px;
+  border-radius: var(--r-pill);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  background: var(--bg-high);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  cursor: pointer;
+  white-space: nowrap;
+  min-height: 32px;
+  transition: background var(--t-fast);
+}
+
+.ai-action-btn:active {
+  background: var(--purple-bg);
+  color: var(--purple-light);
+}

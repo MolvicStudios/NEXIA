@@ -1,0 +1,43 @@
+<div id="editor-view" class="view-no-pad" style="position:relative">
+
+  <!-- Toolbar: skill + docs + acciones -->
+  <div id="editor-toolbar">
+    <button class="btn btn-icon btn-ghost" id="editor-docs-btn"
+            style="font-size:16px;color:var(--text-muted)">☰</button>
+    <div id="editor-skill-chip" style="flex:1"></div>
+    <button class="btn btn-icon btn-ghost" id="editor-copy-btn"
+            aria-label="Copiar todo" style="font-size:16px">⎘</button>
+    <button class="btn btn-icon btn-ghost" id="editor-share-btn"
+            aria-label="Compartir" style="font-size:16px">↗</button>
+  </div>
+
+  <!-- Área de texto principal -->
+  <textarea id="editor-textarea"
+            data-i18n-placeholder="editor.placeholder"
+            spellcheck="true"></textarea>
+
+  <!-- Barra de acciones IA flotante -->
+  <div id="ai-action-bar">
+    <button class="ai-action-btn" data-action="improve"
+            data-i18n="editor.improve">Mejorar</button>
+    <button class="ai-action-btn" data-action="shorten"
+            data-i18n="editor.shorten">Acortar</button>
+    <button class="ai-action-btn" data-action="expand"
+            data-i18n="editor.expand">Ampliar</button>
+    <button class="ai-action-btn" data-action="fix"
+            data-i18n="editor.fix">Corregir</button>
+    <button class="ai-action-btn" data-action="simplify"
+            data-i18n="editor.simplify">Simplificar</button>
+    <button class="ai-action-btn" data-action="tone"
+            data-i18n="editor.toneTitle">Tono</button>
+    <button class="ai-action-btn" data-action="continue"
+            data-i18n="editor.continue">Continuar</button>
+  </div>
+
+  <!-- Footer: info documento -->
+  <div id="editor-footer">
+    <span id="editor-status" data-i18n="editor.docSaved"></span>
+    <span id="editor-wordcount" class="api-text"></span>
+  </div>
+
+</div>

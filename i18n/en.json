@@ -145,5 +145,85 @@
     "modelSaved": "Model saved",
     "providerActive": "Active provider",
     "switchProvider": "Switch to this provider"
+  },
+  "editor": {
+    "title": "AI Editor",
+    "newDoc": "New document",
+    "untitled": "Untitled",
+    "placeholder": "Start writing or paste your text here...",
+    "wordCount": "{{count}} words",
+    "charCount": "{{count}} chars",
+    "myDocs": "My documents",
+    "noDocsYet": "No documents saved",
+    "docSaved": "Saved",
+    "docDeleted": "Document deleted",
+    "selectText": "Select text to see AI actions",
+    "aiActions": "AI actions",
+    "improve": "Improve",
+    "shorten": "Shorten",
+    "expand": "Expand",
+    "continue": "Continue",
+    "fix": "Fix",
+    "simplify": "Simplify",
+    "toneTitle": "Change tone",
+    "toneFormal": "Formal",
+    "toneCasual": "Casual",
+    "tonePersuasive": "Persuasive",
+    "toneProfessional": "Professional",
+    "replaceSelection": "Replace selection",
+    "insertBelow": "Insert below",
+    "discard": "Discard",
+    "generating": "Generating...",
+    "copyAll": "Copy all",
+    "shareAll": "Share"
+  },
+  "email": {
+    "title": "AI Email",
+    "typeLabel": "Email type",
+    "types": {
+      "cold": "Cold outreach",
+      "followup": "Follow-up",
+      "formal": "Formal / Professional",
+      "newsletter": "Newsletter",
+      "complaint": "Complaint"
+    },
+    "toneLabel": "Tone",
+    "tones": {
+      "professional": "Professional",
+      "friendly": "Friendly",
+      "urgent": "Urgent"
+    },
+    "recipientLabel": "Recipient (optional)",
+    "recipientPlaceholder": "Name or company...",
+    "objectiveLabel": "What do you want to achieve?",
+    "objectivePlaceholder": "Introduce my service, follow up on...",
+    "subjectLabel": "Suggested subject",
+    "generateEmail": "Generate email",
+    "copySubject": "Copy subject",
+    "copyBody": "Copy body",
+    "copyAll": "Copy all"
+  },
+  "translator": {
+    "title": "Translator",
+    "from": "From",
+    "to": "To",
+    "swap": "↔",
+    "domainLabel": "Domain",
+    "domains": {
+      "general": "General",
+      "technical": "Technical",
+      "legal": "Legal",
+      "casual": "Casual"
+    },
+    "inputPlaceholder": "Write or paste the text to translate...",
+    "translate": "Translate",
+    "charLimit": "Maximum 3000 characters",
+    "langs": {
+      "es": "Spanish",
+      "en": "English",
+      "de": "German",
+      "fr": "French",
+      "zh": "Chinese"
+    }
   }
 }
