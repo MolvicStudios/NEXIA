@@ -1,0 +1,52 @@
+<div class="view" id="summarizer-view">
+  <div id="sum-skill-chip" style="margin-bottom:var(--space-md)"></div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:var(--space-md)">
+    <div class="input-group" style="margin-bottom:0">
+      <label class="input-label" data-i18n="summarizer.modeLabel">Modo</label>
+      <select class="input" id="sum-mode">
+        <option value="bullets"   data-i18n="summarizer.modes.bullets">Puntos clave</option>
+        <option value="executive" data-i18n="summarizer.modes.executive">Ejecutivo</option>
+        <option value="concepts"  data-i18n="summarizer.modes.concepts">Conceptos</option>
+        <option value="swot"      data-i18n="summarizer.modes.swot">DAFO</option>
+      </select>
+    </div>
+    <div class="input-group" style="margin-bottom:0">
+      <label class="input-label" data-i18n="summarizer.levelLabel">Detalle</label>
+      <select class="input" id="sum-level">
+        <option value="high"   data-i18n="summarizer.levels.high">Alto</option>
+        <option value="medium" data-i18n="summarizer.levels.medium" selected>Medio</option>
+        <option value="low"    data-i18n="summarizer.levels.low">Bajo</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="input-group">
+    <label class="input-label" data-i18n="summarizer.inputLabel">Texto</label>
+    <textarea class="input textarea" id="sum-input" rows="8" maxlength="8000"
+              data-i18n-placeholder="summarizer.inputPlaceholder"></textarea>
+    <div class="char-count" id="sum-char-count">0/8000</div>
+  </div>
+
+  <button class="btn btn-primary btn-full" id="sum-btn">
+    <span data-i18n="summarizer.summarize">Resumir</span>
+  </button>
+
+  <div class="generating-bar" id="sum-progress" style="margin-top:var(--space-md)">
+    <div class="generating-bar-fill"></div>
+  </div>
+
+  <div id="sum-result" style="display:none;margin-top:var(--space-md)">
+    <label class="input-label">Resultado</label>
+    <div class="output-box selectable" id="sum-output"></div>
+    <div class="output-actions" style="margin-top:var(--space-sm)">
+      <button class="btn btn-secondary" id="sum-copy-btn">
+        <span data-i18n="common.copy">Copiar</span>
+      </button>
+      <button class="btn btn-secondary" id="sum-share-btn">
+        <span data-i18n="common.share">Compartir</span>
+      </button>
+      <button class="btn btn-ghost" id="sum-regen-btn">↺</button>
+    </div>
+  </div>
+</div>

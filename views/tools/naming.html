@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8" /><title data-i18n="naming.title">Naming IA</title></head>
+<body class="view" id="view-naming">
+
+  <div class="tool-header">
+    <button class="icon-btn" id="naming-back-btn" aria-label="Volver">&#8592;</button>
+    <h1 class="tool-title" data-i18n="naming.title">Naming IA</h1>
+    <div id="naming-skill-chip"></div>
+  </div>
+
+  <div class="tool-content">
+
+    <div class="field-group">
+      <label class="field-label" for="naming-desc" data-i18n="naming.descLabel">Describe tu proyecto o negocio</label>
+      <textarea id="naming-desc"
+                class="field-textarea"
+                rows="4"
+                maxlength="1000"
+                data-i18n-placeholder="naming.descPlaceholder"></textarea>
+    </div>
+
+    <div class="grid-2col">
+      <div class="field-group">
+        <label class="field-label" for="naming-industry" data-i18n="naming.industryLabel">Industria / sector</label>
+        <select id="naming-industry" class="field-select">
+          <option value="technology"   data-i18n="naming.industries.technology">Tecnología</option>
+          <option value="health"       data-i18n="naming.industries.health">Salud y bienestar</option>
+          <option value="food"         data-i18n="naming.industries.food">Alimentación</option>
+          <option value="fashion"      data-i18n="naming.industries.fashion">Moda y lifestyle</option>
+          <option value="education"    data-i18n="naming.industries.education">Educación</option>
+          <option value="finance"      data-i18n="naming.industries.finance">Finanzas</option>
+          <option value="creative"     data-i18n="naming.industries.creative">Creatividad y diseño</option>
+          <option value="ecommerce"    data-i18n="naming.industries.ecommerce">E-commerce</option>
+          <option value="consulting"   data-i18n="naming.industries.consulting">Consultoría</option>
+          <option value="other"        data-i18n="naming.industries.other">Otro</option>
+        </select>
+      </div>
+
+      <div class="field-group">
+        <label class="field-label" for="naming-style" data-i18n="naming.styleLabel">Estilo de nombre</label>
+        <select id="naming-style" class="field-select">
+          <option value="modern"      data-i18n="naming.styles.modern">Moderno / minimalista</option>
+          <option value="classic"     data-i18n="naming.styles.classic">Clásico / formal</option>
+          <option value="playful"     data-i18n="naming.styles.playful">Juguetón / creativo</option>
+          <option value="compound"    data-i18n="naming.styles.compound">Compuesto / descriptivo</option>
+          <option value="acronym"     data-i18n="naming.styles.acronym">Acrónimo / siglas</option>
+          <option value="evocative"   data-i18n="naming.styles.evocative">Evocador / metafórico</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <label class="field-label" for="naming-lang-pref" data-i18n="naming.langPrefLabel">Preferencia de idioma</label>
+      <select id="naming-lang-pref" class="field-select">
+        <option value="es"       data-i18n="naming.langPrefs.es">Español</option>
+        <option value="en"       data-i18n="naming.langPrefs.en">Inglés</option>
+        <option value="mixed"    data-i18n="naming.langPrefs.mixed">Mezcla / neutro</option>
+        <option value="invented" data-i18n="naming.langPrefs.invented">Inventado / neologismo</option>
+      </select>
+    </div>
+
+    <button id="naming-btn" class="btn-primary" data-i18n="naming.generate">Generar nombres</button>
+    <div id="naming-progress" class="generating-bar" data-i18n="naming.generating">
+      <span></span>
+    </div>
+
+    <div id="naming-results" style="display:none;">
+      <div id="naming-list" class="naming-card-list"></div>
+
+      <p class="naming-availability-note" data-i18n="naming.availabilityNote">
+        Verifica la disponibilidad del dominio y marca antes de elegir un nombre.
+      </p>
+
+      <button id="naming-regen-btn" class="btn-secondary" data-i18n="naming.regenerate">Regenerar</button>
+    </div>
+
+  </div>
+
+</body>
+</html>

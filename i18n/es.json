@@ -225,5 +225,142 @@
       "fr": "Francés",
       "zh": "Chino"
     }
+  },
+  "code": {
+    "title": "Código IA",
+    "modeLabel": "Modo",
+    "langLabel": "Lenguaje",
+    "modes": {
+      "explain": "Explicar",
+      "generate": "Generar",
+      "debug": "Depurar",
+      "refactor": "Refactorizar",
+      "document": "Documentar"
+    },
+    "inputLabel": "Código o descripción",
+    "inputPlaceholder": "Pega tu código aquí...",
+    "generatePlaceholder": "Describe el código que necesitas...",
+    "run": "Ejecutar",
+    "copyCode": "Copiar código",
+    "noCode": "Escribe o pega código para continuar"
+  },
+  "generator": {
+    "title": "Generador",
+    "typeLabel": "Tipo de contenido",
+    "types": {
+      "social_post": "Post para redes",
+      "article": "Artículo / Blog",
+      "ad_copy": "Copy publicitario",
+      "product_desc": "Descripción de producto",
+      "video_script": "Guión de vídeo",
+      "newsletter": "Newsletter"
+    },
+    "platformLabel": "Plataforma",
+    "platforms": {
+      "twitter": "Twitter/X",
+      "linkedin": "LinkedIn",
+      "instagram": "Instagram"
+    },
+    "toneLabel": "Tono",
+    "tones": {
+      "informative": "Informativo",
+      "persuasive": "Persuasivo",
+      "entertaining": "Entretenido",
+      "professional": "Profesional"
+    },
+    "topicLabel": "Tema o producto",
+    "topicPlaceholder": "Describe el tema, producto o servicio...",
+    "keywordsLabel": "Palabras clave SEO (opcional)",
+    "keywordsPlaceholder": "keyword1, keyword2...",
+    "generate": "Generar contenido",
+    "noTopic": "Escribe el tema del contenido"
+  },
+  "repurpose": {
+    "title": "Repurpose",
+    "sourceLabel": "Contenido original",
+    "sourcePlaceholder": "Pega aquí tu contenido...",
+    "targetLabel": "Transformar a",
+    "targets": {
+      "tweet_thread": "Hilo de Twitter",
+      "linkedin_post": "Post LinkedIn",
+      "email": "Email de newsletter",
+      "summary": "Resumen ejecutivo",
+      "blog_post": "Post de blog",
+      "video_script": "Guión de vídeo"
+    },
+    "noSource": "Pega el contenido que quieres transformar",
+    "repurpose": "Transformar contenido"
+  },
+  "summarizer": {
+    "title": "Resumir",
+    "inputLabel": "Texto a resumir",
+    "inputPlaceholder": "Pega aquí tu texto (máximo 8000 caracteres)...",
+    "modeLabel": "Tipo de resumen",
+    "levelLabel": "Nivel de detalle",
+    "modes": {
+      "bullets": "Puntos clave",
+      "executive": "Resumen ejecutivo",
+      "concepts": "Conceptos clave",
+      "swot": "Análisis DAFO"
+    },
+    "levels": {
+      "high": "Alto",
+      "medium": "Medio",
+      "low": "Bajo"
+    },
+    "summarize": "Resumir",
+    "noText": "Pega el texto que quieres resumir"
+  },
+  "brief": {
+    "title": "Brief Gen",
+    "typeLabel": "Tipo de brief",
+    "types": {
+      "creative": "Creativo (visual/marca)",
+      "strategic": "Estratégico (campaña/negocio)",
+      "content": "Contenido (editorial/blog)",
+      "project": "Proyecto (desarrollo/consultoría)"
+    },
+    "generate": "Generar brief",
+    "noInput": "Rellena los campos obligatorios",
+    "clientLabel": "Cliente / Empresa",
+    "projectLabel": "Nombre del proyecto",
+    "objectiveLabel": "Objetivo principal",
+    "audienceLabel": "Audiencia objetivo",
+    "budgetLabel": "Presupuesto (opcional)",
+    "deadlineLabel": "Fecha límite (opcional)",
+    "notesLabel": "Notas adicionales (opcional)"
+  },
+  "naming": {
+    "title": "Naming IA",
+    "descLabel": "Describe tu negocio o producto",
+    "descPlaceholder": "Ej: App de IA para emprendedores que automatiza tareas de marketing...",
+    "industryLabel": "Industria",
+    "styleLabel": "Estilo de nombre",
+    "industries": {
+      "tech": "Tecnología",
+      "retail": "Retail/Comercio",
+      "health": "Salud/Bienestar",
+      "education": "Educación",
+      "finance": "Finanzas",
+      "food": "Alimentación",
+      "other": "Otro"
+    },
+    "styles": {
+      "modern": "Moderno/Tech",
+      "classic": "Clásico/Serio",
+      "playful": "Jugueón/Creativo",
+      "technical": "Técnico/Preciso"
+    },
+    "langPrefLabel": "Idioma preferido del nombre",
+    "generate": "Generar nombres",
+    "noDesc": "Describe tu negocio o producto",
+    "favoriteSaved": "Guardado en favoritos",
+    "typeLabels": {
+      "compound": "Compuesto",
+      "invented": "Inventado",
+      "descriptive": "Descriptivo",
+      "acronym": "Acrónimo"
+    },
+    "availabilityNote": "Verifica disponibilidad antes de registrar"
   }
 }

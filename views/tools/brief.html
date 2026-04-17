@@ -1,0 +1,63 @@
+<div class="view" id="brief-view">
+  <div id="brief-skill-chip" style="margin-bottom:var(--space-md)"></div>
+
+  <div class="input-group">
+    <label class="input-label" data-i18n="brief.typeLabel">Tipo</label>
+    <select class="input" id="brief-type">
+      <option value="creative"  data-i18n="brief.types.creative">Creativo</option>
+      <option value="strategic" data-i18n="brief.types.strategic">Estratégico</option>
+      <option value="content"   data-i18n="brief.types.content">Contenido</option>
+      <option value="project"   data-i18n="brief.types.project">Proyecto</option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <label class="input-label" data-i18n="brief.clientLabel">Cliente / Empresa</label>
+    <input class="input" id="brief-client" />
+  </div>
+  <div class="input-group">
+    <label class="input-label" data-i18n="brief.projectLabel">Nombre del proyecto *</label>
+    <input class="input" id="brief-project" />
+  </div>
+  <div class="input-group">
+    <label class="input-label" data-i18n="brief.objectiveLabel">Objetivo principal *</label>
+    <textarea class="input textarea" id="brief-objective" rows="3"></textarea>
+  </div>
+  <div class="input-group">
+    <label class="input-label" data-i18n="brief.audienceLabel">Audiencia objetivo *</label>
+    <input class="input" id="brief-audience" />
+  </div>
+  <div class="input-group">
+    <label class="input-label" data-i18n="brief.budgetLabel">Presupuesto</label>
+    <input class="input" id="brief-budget" />
+  </div>
+  <div class="input-group">
+    <label class="input-label" data-i18n="brief.deadlineLabel">Fecha límite</label>
+    <input class="input" id="brief-deadline" type="date" />
+  </div>
+  <div class="input-group">
+    <label class="input-label" data-i18n="brief.notesLabel">Notas adicionales</label>
+    <textarea class="input textarea" id="brief-notes" rows="3"></textarea>
+  </div>
+
+  <button class="btn btn-primary btn-full" id="brief-btn">
+    <span data-i18n="brief.generate">Generar brief</span>
+  </button>
+
+  <div class="generating-bar" id="brief-progress" style="margin-top:var(--space-md)">
+    <div class="generating-bar-fill"></div>
+  </div>
+
+  <div id="brief-result" style="display:none;margin-top:var(--space-md)">
+    <label class="input-label">Brief generado</label>
+    <div class="output-box selectable" id="brief-output" style="min-height:200px"></div>
+    <div class="output-actions" style="margin-top:var(--space-sm)">
+      <button class="btn btn-secondary" id="brief-copy-btn">
+        <span data-i18n="common.copy">Copiar</span>
+      </button>
+      <button class="btn btn-secondary" id="brief-share-btn">
+        <span data-i18n="common.share">Compartir</span>
+      </button>
+    </div>
+  </div>
+</div>

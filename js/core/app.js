@@ -85,6 +85,26 @@ const App = (() => {
     Router.on('translator', (viewEl) => {
       if (window.TranslatorTool) TranslatorTool.init(viewEl);
     });
+
+    // ── Handlers reales (MP10-13 — Código IA, Generador, Repurpose, Resumir, Brief Gen, Naming IA) ──
+    Router.on('code', (viewEl) => {
+      if (window.CodeTool) CodeTool.init(viewEl);
+    });
+    Router.on('generator', (viewEl) => {
+      if (window.GeneratorTool) GeneratorTool.init(viewEl);
+    });
+    Router.on('repurpose', (viewEl) => {
+      if (window.RepurposeTool) RepurposeTool.init(viewEl);
+    });
+    Router.on('summarizer', (viewEl) => {
+      if (window.SummarizerTool) SummarizerTool.init(viewEl);
+    });
+    Router.on('brief', (viewEl) => {
+      if (window.BriefTool) BriefTool.init(viewEl);
+    });
+    Router.on('naming', (viewEl) => {
+      if (window.NamingTool) NamingTool.init(viewEl);
+    });
   }
 
   // ── Event listeners globales ─────────────────────────────────────────────

@@ -1,0 +1,69 @@
+<div class="view" id="generator-view">
+  <div id="gen-skill-chip" style="margin-bottom:var(--space-md)"></div>
+
+  <div class="input-group">
+    <label class="input-label" data-i18n="generator.typeLabel">Tipo</label>
+    <select class="input" id="gen-type">
+      <option value="social_post"  data-i18n="generator.types.social_post">Post para redes</option>
+      <option value="article"      data-i18n="generator.types.article">Artículo</option>
+      <option value="ad_copy"      data-i18n="generator.types.ad_copy">Copy publicitario</option>
+      <option value="product_desc" data-i18n="generator.types.product_desc">Descripción producto</option>
+      <option value="video_script" data-i18n="generator.types.video_script">Guión vídeo</option>
+      <option value="newsletter"   data-i18n="generator.types.newsletter">Newsletter</option>
+    </select>
+  </div>
+
+  <!-- Plataforma (solo visible para social_post) -->
+  <div class="input-group" id="gen-platform-group">
+    <label class="input-label" data-i18n="generator.platformLabel">Plataforma</label>
+    <select class="input" id="gen-platform">
+      <option value="twitter"   data-i18n="generator.platforms.twitter">Twitter/X</option>
+      <option value="linkedin"  data-i18n="generator.platforms.linkedin">LinkedIn</option>
+      <option value="instagram" data-i18n="generator.platforms.instagram">Instagram</option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <label class="input-label" data-i18n="generator.toneLabel">Tono</label>
+    <select class="input" id="gen-tone">
+      <option value="informative"  data-i18n="generator.tones.informative">Informativo</option>
+      <option value="persuasive"   data-i18n="generator.tones.persuasive">Persuasivo</option>
+      <option value="entertaining" data-i18n="generator.tones.entertaining">Entretenido</option>
+      <option value="professional" data-i18n="generator.tones.professional">Profesional</option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <label class="input-label" data-i18n="generator.topicLabel">Tema</label>
+    <textarea class="input textarea" id="gen-topic" rows="3"
+              data-i18n-placeholder="generator.topicPlaceholder"></textarea>
+  </div>
+
+  <div class="input-group">
+    <label class="input-label" data-i18n="generator.keywordsLabel">Palabras clave</label>
+    <input class="input" id="gen-keywords"
+           data-i18n-placeholder="generator.keywordsPlaceholder" />
+  </div>
+
+  <button class="btn btn-primary btn-full" id="gen-btn">
+    <span data-i18n="generator.generate">Generar contenido</span>
+  </button>
+
+  <div class="generating-bar" id="gen-progress" style="margin-top:var(--space-md)">
+    <div class="generating-bar-fill"></div>
+  </div>
+
+  <div id="gen-result" style="display:none;margin-top:var(--space-md)">
+    <label class="input-label">Contenido generado</label>
+    <div class="output-box selectable" id="gen-output"></div>
+    <div class="output-actions" style="margin-top:var(--space-sm)">
+      <button class="btn btn-secondary" id="gen-copy-btn">
+        <span data-i18n="common.copy">Copiar</span>
+      </button>
+      <button class="btn btn-secondary" id="gen-share-btn">
+        <span data-i18n="common.share">Compartir</span>
+      </button>
+      <button class="btn btn-ghost" id="gen-regen-btn">↺</button>
+    </div>
+  </div>
+</div>

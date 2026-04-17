@@ -1,0 +1,44 @@
+<div class="view" id="repurpose-view">
+  <div id="rep-skill-chip" style="margin-bottom:var(--space-md)"></div>
+
+  <div class="input-group">
+    <label class="input-label" data-i18n="repurpose.sourceLabel">Contenido original</label>
+    <textarea class="input textarea" id="rep-source" rows="6" maxlength="5000"
+              data-i18n-placeholder="repurpose.sourcePlaceholder"></textarea>
+    <div class="char-count" id="rep-char-count">0/5000</div>
+  </div>
+
+  <div class="input-group">
+    <label class="input-label" data-i18n="repurpose.targetLabel">Transformar a</label>
+    <select class="input" id="rep-target">
+      <option value="tweet_thread"  data-i18n="repurpose.targets.tweet_thread">Hilo de Twitter</option>
+      <option value="linkedin_post" data-i18n="repurpose.targets.linkedin_post">Post LinkedIn</option>
+      <option value="email"         data-i18n="repurpose.targets.email">Email newsletter</option>
+      <option value="summary"       data-i18n="repurpose.targets.summary">Resumen ejecutivo</option>
+      <option value="blog_post"     data-i18n="repurpose.targets.blog_post">Post de blog</option>
+      <option value="video_script"  data-i18n="repurpose.targets.video_script">Guión de vídeo</option>
+    </select>
+  </div>
+
+  <button class="btn btn-primary btn-full" id="rep-btn">
+    <span data-i18n="repurpose.repurpose">Transformar contenido</span>
+  </button>
+
+  <div class="generating-bar" id="rep-progress" style="margin-top:var(--space-md)">
+    <div class="generating-bar-fill"></div>
+  </div>
+
+  <div id="rep-result" style="display:none;margin-top:var(--space-md)">
+    <label class="input-label">Resultado</label>
+    <div class="output-box selectable" id="rep-output"></div>
+    <div class="output-actions" style="margin-top:var(--space-sm)">
+      <button class="btn btn-secondary" id="rep-copy-btn">
+        <span data-i18n="common.copy">Copiar</span>
+      </button>
+      <button class="btn btn-secondary" id="rep-share-btn">
+        <span data-i18n="common.share">Compartir</span>
+      </button>
+      <button class="btn btn-ghost" id="rep-regen-btn">↺</button>
+    </div>
+  </div>
+</div>

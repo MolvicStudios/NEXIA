@@ -225,5 +225,142 @@
       "fr": "French",
       "zh": "Chinese"
     }
+  },
+  "code": {
+    "title": "AI Code",
+    "modeLabel": "Mode",
+    "langLabel": "Language",
+    "modes": {
+      "explain": "Explain",
+      "generate": "Generate",
+      "debug": "Debug",
+      "refactor": "Refactor",
+      "document": "Document"
+    },
+    "inputLabel": "Code or description",
+    "inputPlaceholder": "Paste your code here...",
+    "generatePlaceholder": "Describe the code you need...",
+    "run": "Run",
+    "copyCode": "Copy code",
+    "noCode": "Write or paste code to continue"
+  },
+  "generator": {
+    "title": "Generator",
+    "typeLabel": "Content type",
+    "types": {
+      "social_post": "Social post",
+      "article": "Article / Blog",
+      "ad_copy": "Ad copy",
+      "product_desc": "Product description",
+      "video_script": "Video script",
+      "newsletter": "Newsletter"
+    },
+    "platformLabel": "Platform",
+    "platforms": {
+      "twitter": "Twitter/X",
+      "linkedin": "LinkedIn",
+      "instagram": "Instagram"
+    },
+    "toneLabel": "Tone",
+    "tones": {
+      "informative": "Informative",
+      "persuasive": "Persuasive",
+      "entertaining": "Entertaining",
+      "professional": "Professional"
+    },
+    "topicLabel": "Topic or product",
+    "topicPlaceholder": "Describe the topic, product or service...",
+    "keywordsLabel": "SEO keywords (optional)",
+    "keywordsPlaceholder": "keyword1, keyword2...",
+    "generate": "Generate content",
+    "noTopic": "Write the content topic"
+  },
+  "repurpose": {
+    "title": "Repurpose",
+    "sourceLabel": "Original content",
+    "sourcePlaceholder": "Paste your content here...",
+    "targetLabel": "Transform to",
+    "targets": {
+      "tweet_thread": "Twitter thread",
+      "linkedin_post": "LinkedIn post",
+      "email": "Newsletter email",
+      "summary": "Executive summary",
+      "blog_post": "Blog post",
+      "video_script": "Video script"
+    },
+    "noSource": "Paste the content you want to transform",
+    "repurpose": "Transform content"
+  },
+  "summarizer": {
+    "title": "Summarize",
+    "inputLabel": "Text to summarize",
+    "inputPlaceholder": "Paste your text here (maximum 8000 characters)...",
+    "modeLabel": "Summary type",
+    "levelLabel": "Detail level",
+    "modes": {
+      "bullets": "Key points",
+      "executive": "Executive summary",
+      "concepts": "Key concepts",
+      "swot": "SWOT analysis"
+    },
+    "levels": {
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low"
+    },
+    "summarize": "Summarize",
+    "noText": "Paste the text you want to summarize"
+  },
+  "brief": {
+    "title": "Brief Gen",
+    "typeLabel": "Brief type",
+    "types": {
+      "creative": "Creative (visual/brand)",
+      "strategic": "Strategic (campaign/business)",
+      "content": "Content (editorial/blog)",
+      "project": "Project (development/consulting)"
+    },
+    "generate": "Generate brief",
+    "noInput": "Fill in the required fields",
+    "clientLabel": "Client / Company",
+    "projectLabel": "Project name",
+    "objectiveLabel": "Main objective",
+    "audienceLabel": "Target audience",
+    "budgetLabel": "Budget (optional)",
+    "deadlineLabel": "Deadline (optional)",
+    "notesLabel": "Additional notes (optional)"
+  },
+  "naming": {
+    "title": "AI Naming",
+    "descLabel": "Describe your business or product",
+    "descPlaceholder": "E.g.: AI app for entrepreneurs that automates marketing tasks...",
+    "industryLabel": "Industry",
+    "styleLabel": "Name style",
+    "industries": {
+      "tech": "Technology",
+      "retail": "Retail/Commerce",
+      "health": "Health/Wellness",
+      "education": "Education",
+      "finance": "Finance",
+      "food": "Food",
+      "other": "Other"
+    },
+    "styles": {
+      "modern": "Modern/Tech",
+      "classic": "Classic/Serious",
+      "playful": "Playful/Creative",
+      "technical": "Technical/Precise"
+    },
+    "langPrefLabel": "Preferred name language",
+    "generate": "Generate names",
+    "noDesc": "Describe your business or product",
+    "favoriteSaved": "Saved to favorites",
+    "typeLabels": {
+      "compound": "Compound",
+      "invented": "Invented",
+      "descriptive": "Descriptive",
+      "acronym": "Acronym"
+    },
+    "availabilityNote": "Verify availability before registering"
   }
 }
